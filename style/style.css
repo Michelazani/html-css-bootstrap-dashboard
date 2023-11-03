@@ -17,7 +17,6 @@ section.aside{
 }
 
 main{
-    background-color:  green;
     width: calc(100vw - 80px);
     height: calc(100vh - 50px) ;
 }
@@ -46,7 +45,6 @@ main{
 }
 
 main{
-    background-color:  green;
     width: calc(100vw - 100px);
 }
 }
