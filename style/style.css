@@ -1,0 +1,29 @@
+div.border .row .col-1{
+    border: 1px solid blue;
+}
+
+
+header{
+    background-color:  magenta;
+    height: 50px;
+}
+div.aside{
+    background-color: aqua;
+    width: 60px;
+    height: calc(100vh - 50px) ;
+}
+
+main{
+    background-color:  green;
+    width: calc(100vw - 60px);
+    height: calc(100vh - 50px) ;
+}
+
+.main-header{
+    width: 100%;
+}
+
+.wrapper{
+    display: flex;
+    flex-wrap: wrap;
+}
