@@ -1,21 +1,24 @@
+/* DA TOGLIERE ALLA FINE */
+
 div.border .row .col-1{
     border: 1px solid blue;
 }
 
+/* TOLGO BACKGROUND */
 
 header{
     background-color:  magenta;
     height: 50px;
 }
-div.aside{
+section.aside{
     background-color: aqua;
-    width: 60px;
+    width: 80px;
     height: calc(100vh - 50px) ;
 }
 
 main{
     background-color:  green;
-    width: calc(100vw - 60px);
+    width: calc(100vw - 80px);
     height: calc(100vh - 50px) ;
 }
 
@@ -26,4 +29,22 @@ main{
 .wrapper{
     display: flex;
     flex-wrap: wrap;
+}
+
+
+
+
+/* MEDIA LG */
+
+@media screen and (min-width: 992px) {
+
+    section.aside{
+    background-color: aqua;
+    width: 100px;
+}
+
+main{
+    background-color:  green;
+    width: calc(100vw - 100px);
+}
 }
