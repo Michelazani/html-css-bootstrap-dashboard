@@ -17,6 +17,7 @@
     <!-- fontawesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 
+    
 
 </head>
 <body>
@@ -27,8 +28,17 @@
           <img class="navbar-brand d-lg-none" src="./img/mobile-logo.png" alt="">
           <img class="d-none d-lg-inline" src="./img/logo.svg" alt="">
           <form class="d-flex my_w-85" role="search">
-            <input class="form-control me-5" type="search" placeholder="Search" aria-label="Search">
-            <i class="fa-solid fa-bell d-flex align-items-center" style="color: #ff8f00;"></i>
+            <input class="form-control me-4" type="search" placeholder="Search" aria-label="Search">
+            <div class="d-none d-lg-flex align-items-center">
+                <i class="fa-solid fa-list-ul me-2" style="color: #808080;"></i>
+                <i class="fa-solid fa-ellipsis-vertical me-2" style="color: #808080;"></i>
+                <i class="fa-solid fa-circle-question me-2 " style="color: #808080;"></i>
+            </div>
+
+            <button type="button" class="btn " data-bs-container="body" data-bs-toggle="popover" data-bs-placement="bottom" data-bs-content="Profilo">
+                <i class="fa-solid fa-bell d-flex align-items-center" style="color: #ff8f00;"></i>
+              </button>
+              
           </form>
         </div>
       </nav>
@@ -64,7 +74,80 @@
                 
                     <div class="col-12 col-md-4 col-lg-3 p-3 order-md-3">
                         <span>Nuovo studente</span>
-                        <button type="button" class="btn btn-outline-light "><i class="fa-solid fa-plus fs-5" style="color: #ffffff;"></i></button>
+                        <button type="button" class="btn btn-outline-light " data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"><i class="fa-solid fa-plus fs-5" style="color: #ffffff;"></i></button>
+                        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+                            <div class="offcanvas-header">
+                              <h5 class="offcanvas-title" id="offcanvasRightLabel">Inserisci un nome studente</h5>
+                              <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                            </div>
+                            <div class="offcanvas-body">
+                                <form class="row g-3 " novalidate>
+                                    <div class="col-lg-6">
+                                      <label for="validationCustom01" class="form-label">Nome</label>
+                                      <input type="text" class="form-control" id="validationCustom01" value="" required>
+                                    </div>
+                                    <div class="col-lg-6">
+                                      <label for="validationCustom02" class="form-label">Cognome</label>
+                                      <input type="text" class="form-control" id="validationCustom02" value="" required>
+                                    </div>
+                                    <div class="col-lg-6">
+                                      <label for="validationCustomUsername" class="form-label">Email</label>
+                                      <div class="input-group has-validation">
+                                        <span class="input-group-text text-black" id="inputGroupPrepend">@</span>
+                                        <input type="text" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend" required>
+                                      </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <label for="inputPassword4" class="form-label">Password</label>
+                                        <input type="password" class="form-control" id="inputPassword4">
+                                    </div>
+                                    <div class="col-12">
+                                        <label for="inputAddress" class="form-label">Indirizzo</label>
+                                        <input type="text" class="form-control" id="inputAddress" placeholder="">
+                                      </div>
+                                    
+                                    <div class="col-lg-6">
+                                      <label for="validationCustom03" class="form-label">Città</label>
+                                      <input type="text" class="form-control" id="validationCustom03" required>
+                                    </div>
+                                    <div class="col-lg-4">
+                                      <label for="validationCustom04" class="form-label">Stato</label>
+                                      <select class="form-select" id="validationCustom04" required>
+                                        <option selected disabled value="">Scegli...</option>
+                                        <option>
+                                            <p>Italia</p>
+                                            <p>Spagna</p>
+                                        </option>
+                                      </select>
+                                    </div>
+                                    <div class="col-lg-2">
+                                      <label for="validationCustom05" class="form-label">CAP</label>
+                                      <input type="text" class="form-control" id="validationCustom05" required>
+                                    </div>
+
+                                    <div class="mb-3">
+                                        <label for="formFile" class="form-label">Foto</label>
+                                        <input class="form-control" type="file" id="formFile">
+                                    </div>
+                                      
+                                      
+                                    <div class="col-12">
+                                      <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+                                        <label class="form-check-label" for="invalidCheck">
+                                          Seleziona per proseguire
+                                        </label>
+                                      </div>
+                                    </div>
+                                    <div class="col-12">
+                                      <button class="btn btn-primary" type="submit">Salva</button>
+                                      <button type="button" class="btn btn-warning text-black">Svuota</button>
+
+                                    </div>
+                                  </form>
+                            </div>
+                          </div>
+
 
                     </div>
                     <div class="col-12 col-md-4 col-lg-4 p-3 order-md-1">
@@ -322,7 +405,10 @@
     
     </div>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    
 
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
 </body>
 </html>

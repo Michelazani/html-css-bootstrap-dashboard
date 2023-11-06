@@ -87,4 +87,8 @@ table td:first-child{
         background-color: grey;
         border: 1px solid grey;
     }
+
+    .form-control{
+        width:88%
+    }
 }
