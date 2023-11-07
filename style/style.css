@@ -57,6 +57,9 @@ table img{
     margin: 0 0.5rem;
 }
 
+.my_f-s{
+    font-size: 0.7rem;
+}
 
 /* MEDIA MD */
 @media screen and (min-width: 768px) {
