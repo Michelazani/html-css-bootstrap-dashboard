@@ -29,19 +29,25 @@
           <img class="d-none d-lg-inline" src="./img/logo.svg" alt="">
           <form class="d-flex my_w-85" role="search">
             <input class="form-control me-4" type="search" placeholder="Search" aria-label="Search">
-            <div class="d-none d-lg-flex align-items-center">
+              <div class="d-none d-lg-flex align-items-center">
                 <i class="fa-solid fa-list-ul me-2" style="color: #808080;"></i>
                 <i class="fa-solid fa-ellipsis-vertical me-2" style="color: #808080;"></i>
                 <i class="fa-solid fa-circle-question me-2 " style="color: #808080;"></i>
-            </div>
+              </div>
 
-            <button type="button" class="btn " data-bs-container="body" data-bs-toggle="popover" data-bs-placement="bottom" data-bs-content="Profilo">
+            <div class="dropdown d-flex align-items-center">
+              <button class="btn" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                 <i class="fa-solid fa-bell d-flex align-items-center" style="color: #ff8f00;"></i>
               </button>
-              
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Profilo</a></li>
+                <li><a class="dropdown-item" href="#">Fatturazione</a></li>
+                <li><a class="dropdown-item" href="#">Logout</a></li>
+              </ul>
+            </div>
           </form>
         </div>
-      </nav>
+    </nav>
 
     <div class="wrapper">
 
@@ -75,7 +81,7 @@
                     <div class="col-12 col-md-4 col-lg-3 p-3 order-md-3">
                         <span>Nuovo studente</span>
                         <button type="button" class="btn btn-outline-light " data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"><i class="fa-solid fa-plus fs-5" style="color: #ffffff;"></i></button>
-                        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+                        <div class="offcanvas offcanvas-end my_w-100  " tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
                             <div class="offcanvas-header">
                               <h5 class="offcanvas-title" id="offcanvasRightLabel">Inserisci un nome studente</h5>
                               <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
