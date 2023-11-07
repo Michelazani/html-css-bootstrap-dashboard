@@ -11,7 +11,7 @@ nav.navbar img{
     width: 7%;
 }
 
-.my_w-100{
+#offcanvasRight{
     width: 100%;
 }
 
@@ -93,7 +93,7 @@ table td:first-child{
         width:88%
     }
 
-    .my_w-100{
+    #offcanvasRight{
         width: 75%;
     }
 }
