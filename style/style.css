@@ -61,6 +61,14 @@ table img{
     font-size: 0.7rem;
 }
 
+.text-main-header button{
+    font-size: 0.6rem;
+}
+
+.my_padding-btn{
+    padding: 0 0.5rem 0.2rem;
+}
+
 /* MEDIA MD */
 @media screen and (min-width: 768px) {
     table td:first-child{
@@ -75,11 +83,15 @@ table img{
 
     section.aside{
     width: 100px;
-}
+    }
 
-main{
-    width: calc(100vw - 100px);
-}
+    main{
+        width: calc(100vw - 100px);
+    }
+
+    section.aside .m-2:hover{
+        background-color: grey;
+    }
 
 table td:first-child{
     width: 47%;
@@ -88,11 +100,7 @@ table td:first-child{
     nav.navbar img{
         width: 10%;
     }
-    section.aside .m-2:hover{
-        background-color: grey;
-        border: 1px solid grey;
-    }
-
+    
     .form-control{
         width:88%
     }
